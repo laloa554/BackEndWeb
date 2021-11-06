@@ -1,0 +1,281 @@
+{
+	"info": {
+		"_postman_id": "0095957c-79b5-4bd5-aa75-acd7999ac897",
+		"name": "Practica1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AgregaUsuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"admin2\",\r\n    \"nombreUsuario\": \"admin2\",\r\n    \"email\": \"laloa554@gmail.com\",\r\n    \"password\": \"admin\",\r\n    \"telefono\": \"2481772350\",\r\n    \"direccion\": \"\",\r\n    \"roles\": [\"admin\",\"user\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/nuevo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"nuevo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombreUsuario\": \"admin2\",\r\n    \"password\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "agregaBolsa",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbjIgJDJhJDEwJGFDVkVaa3g2dFoxMldXV1ltYWR5SmU0bnF6c1BFc2pObnN1QjEwRzFLUHRidFVpZkJPQWdXIiwiaWF0IjoxNjMxMTI4MDM5LCJleHAiOjE2MzExNjQwMzl9.jH2ymgPJlVL1wb_HQXhYjJVRyoAyNAapjjT_EdM-xBpOhxe50elbeX403RRhNd74cIc4ATpi33RndjVfw3Yhdg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"modelo\": \"bosa de mano\",\r\n    \"precio\": 150.00,\r\n    \"descripcion\": \"{'medidas': {'largo':'11','ancho': '11',alto':'11'},'colores':['rojo', 'verde', azul'],'materiales':['hilo', 'forro'],'tejido':'normal'}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Bolsa/agregaBolsa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Bolsa",
+						"agregaBolsa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObtenerBolsas",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbjIgJDJhJDEwJGFDVkVaa3g2dFoxMldXV1ltYWR5SmU0bnF6c1BFc2pObnN1QjEwRzFLUHRidFVpZkJPQWdXIiwiaWF0IjoxNjMxMTI4MDM5LCJleHAiOjE2MzExNjQwMzl9.jH2ymgPJlVL1wb_HQXhYjJVRyoAyNAapjjT_EdM-xBpOhxe50elbeX403RRhNd74cIc4ATpi33RndjVfw3Yhdg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/Bolsa/ObtenerBolsas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Bolsa",
+						"ObtenerBolsas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Estatus",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbjIgJDJhJDEwJENnMzJzNWI2T0VvSE90d0RlRHYvak9EWXExQlNPdm1YQ3Y3MTJuemhJTkhZb2E0TUZiQ2VXIiwiaWF0IjoxNjI4NzI2NDE2LCJleHAiOjE2Mjg3NjI0MTZ9.UduZxniq_rHLKYLOK6S5-mODKw5qnmx0S0TJAo0OcYGqkw_Pe2vjx3h00VgpU1Bl5Zz1f8pIQO5qupZbCiVPYA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/Estatus/2021AAA98",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"Estatus",
+						"2021AAA98"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "borrarBolsa",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbjIgJDJhJDEwJGFDVkVaa3g2dFoxMldXV1ltYWR5SmU0bnF6c1BFc2pObnN1QjEwRzFLUHRidFVpZkJPQWdXIiwiaWF0IjoxNjMxMTI4MDM5LCJleHAiOjE2MzExNjQwMzl9.jH2ymgPJlVL1wb_HQXhYjJVRyoAyNAapjjT_EdM-xBpOhxe50elbeX403RRhNd74cIc4ATpi33RndjVfw3Yhdg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"modelo\":\"bosa de mano\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Bolsa/borraBolsa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Bolsa",
+						"borraBolsa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modificaBolsa",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbjIgJDJhJDEwJGFDVkVaa3g2dFoxMldXV1ltYWR5SmU0bnF6c1BFc2pObnN1QjEwRzFLUHRidFVpZkJPQWdXIiwiaWF0IjoxNjMxMTI4MDM5LCJleHAiOjE2MzExNjQwMzl9.jH2ymgPJlVL1wb_HQXhYjJVRyoAyNAapjjT_EdM-xBpOhxe50elbeX403RRhNd74cIc4ATpi33RndjVfw3Yhdg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"modelo\": \"bosa de mano\",\r\n    \"precio\": 200.00,\r\n    \"descripcion\": \"{'medidas': {'largo':'11','ancho': '11',alto':'11'},'colores':['rojo', 'verde', azul'],'materiales':['hilo', 'forro'],'tejido':'normal'}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Bolsa/modificaBolsa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Bolsa",
+						"modificaBolsa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "descargaComprobante",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/auth/descargaComprobante/2021AAA98",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"descargaComprobante",
+						"2021AAA98"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hacerPedido",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJsYWxvYTU1NCAkMmEkMTAkU0xDYTJ2WFZZdU51d1lqSmRRMU9EZWJoNDFMV2pOSzVmelJWdWR0ZFZ3QlZ1R1dWMlNWZWEiLCJpYXQiOjE2MzYxNjQ1NzEsImV4cCI6MTYzNjE2ODE3MX0.MfA9y0gNUxb-j7WL0FC8ZG-aevHztgeS3uwgk5-A-IPRns1W8p1N8GXO9XtQ5LqnnMzMo3fp8hJmIT5gByBGzA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"laloa554\",\r\n    \"bolsa\":[{\r\n        \"modelo\":\"1\",\r\n        \"precio\": 150.00,\r\n        \"imagen\":\"imagen1.jpg\",\r\n        \"descripcion\":\"bolsa chida\"\r\n    },\r\n    {\r\n        \"modelo\":\"2\",\r\n        \"precio\": 150.00,\r\n        \"imagen\":\"imagen2.jpg\",\r\n        \"descripcion\":\"bolsa chida2\"\r\n    },\r\n    {\r\n        \"modelo\":\"3\",\r\n        \"precio\": 150.00,\r\n        \"imagen\":\"imagen3.jpg\",\r\n        \"descripcion\":\"bolsa chida3\"\r\n    }\r\n    ],\r\n    \"montoTotal\": 450.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Pedido/hacerPedido",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Pedido",
+						"hacerPedido"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
