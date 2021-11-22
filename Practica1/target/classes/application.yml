@@ -1,0 +1,24 @@
+server:
+  port: 8080
+  tomcat:
+    max-swallow-size: -1
+  
+jwt:
+  expiration: 3600
+  secret: secret
+  
+my:
+    property:
+        s: encriptadoclubalphaprueba
+
+spring:  jpa:    hibernate:      ddl-auto: update
+    properties:      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+  datasource:    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/tienda?zeroDateTimeBehavior=convertToNull&serverTimeZone=UTC
+    username: mysql
+    password: lalo 
+  servlet: 
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
